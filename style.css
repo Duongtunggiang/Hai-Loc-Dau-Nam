@@ -25,12 +25,19 @@ body {
 /* Cây mai */
 .tree-container {
     position: absolute;
-    width: 70%;
     bottom: 0;
-    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
     z-index: 2;
 }
-.tree {
+.tree-root {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+}
+.img-tree-root {
     width: 100%;
     animation: glow 3s infinite alternate;
 }
