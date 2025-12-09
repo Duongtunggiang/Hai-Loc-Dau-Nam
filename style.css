@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #1a1a1a;
+    overflow: hidden;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.scene {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Nền đỏ vàng */
+.background-gradient {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #ffdf82 5%, #e84525 60%, #7a0000 100%);
+    position: absolute;
+    z-index: 1;
+}
+
+/* Cây mai */
+.tree-container {
+    position: absolute;
+    width: 70%;
+    bottom: 0;
+    text-align: center;
+    z-index: 2;
+}
+.tree {
+    width: 100%;
+    animation: glow 3s infinite alternate;
+}
+
+/* Hiệu ứng mờ sáng */
+@keyframes glow {
+    from { filter: drop-shadow(0 0 5px #ffc); }
+    to   { filter: drop-shadow(0 0 20px #ffdb4d); }
+}
+
+/* Bao lì xì */
+.envelope {
+    width: 40px;
+    height: 60px;
+    background: url('envelope.svg') center/cover no-repeat;
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+    animation: swing 2s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0%   { transform: rotate(-4deg); }
+    50%  { transform: rotate(4deg); }
+    100% { transform: rotate(-4deg); }
+}
+
+/* Popup lộc */
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.hidden { display: none; }
+
+.popup-content {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeIn .3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
