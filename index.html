@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<title>Hái Lộc Đầu Xuân</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hái lộc đầu năm</h1>
+
+<div class="scene">
+
+    <!-- Nền bầu trời -->
+    <div class="background-gradient"></div>
+
+    <!-- Cây mai SVG -->
+    <div class="tree-container">
+        <div class="tree-root">
+            <img src="assets/images/Treeroot.svg" class="img-tree-root" alt="Cây mai">
+        </div>
+        
+    </div>
+
+    <!-- Lì xì treo -->
+    <div class="lucky-envelopes">
+        <div class="envelope" style="left:45%; top:40%"></div>
+        <div class="envelope" style="left:55%; top:35%"></div>
+        <div class="envelope" style="left:60%; top:50%"></div>
+        <div class="envelope" style="left:50%; top:55%"></div>
+        <div class="envelope" style="left:40%; top:50%"></div>
+    </div>
+
+    <!-- Múa lân (placeholder) -->
+    <div class="lion-dance"></div>
+
+    <!-- Popup quẻ / lời chúc -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Lộc đầu xuân</h2>
+            <p id="fortuneText">Chúc mừng năm mới!</p>
+            <button id="closePopup">Đóng</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
